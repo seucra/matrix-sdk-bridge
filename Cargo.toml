@@ -2,8 +2,8 @@
 name = "matrix-sdk-bridge"
 version = "0.1.0"
 edition = "2024"
-description = "WebAssembly Matrix SDK bridge for Vigilant"
-license = "MIT"
+description = "JavaScript-friendly WebAssembly bindings for the Matrix Rust SDK"
+license = "Apache-2.0"
 
 # To compile this as a dynamic WebAssembly library
 [lib]

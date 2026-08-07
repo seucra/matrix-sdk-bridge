@@ -12,10 +12,10 @@ It is originally developed as the backend bridge for Vigilant but is also mainta
 ## API documentation
 
 Markdown:
-/docs/matrix-bridge-api.md
+https://github.com/seucra/matrix-sdk-bridge/blob/main/docs/matrix-bridge-api.md
 
 Printable PDF:
-/docs/matrix-bridge-api.pdf
+https://github.com/seucra/matrix-sdk-bridge/blob/main/docs/matrix-bridge-api.pdf
 
 ---
 
