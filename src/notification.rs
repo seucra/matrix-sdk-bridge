@@ -16,8 +16,6 @@ impl MatrixBridge {
     pub fn on_notification(&self, callback: js_sys::Function) {
         let own_user_id = self.client.user_id().map(|id| id.to_owned());
 
-        let initial_sync_complete = self.initial_sync_complete.clone();
-
         self.client
             .add_event_handler(move |event: AnySyncTimelineEvent, room: Room| async move {
                 let AnySyncTimelineEvent::MessageLike(AnySyncMessageLikeEvent::RoomMessage(
@@ -54,8 +52,5 @@ impl MatrixBridge {
                     let _ = callback.call1(&JsValue::NULL, &JsValue::from_str(&json));
                 }
             });
-
-        if !initial_sync_complete.get() {
-        }
     }
 }
