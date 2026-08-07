@@ -12,10 +12,10 @@ It is originally developed as the backend bridge for Vigilant but is also mainta
 ## API documentation
 
 Markdown:
-/docs/api.md
+/docs/matrix-bridge-api.md
 
 Printable PDF:
-/docs/api.pdf
+/docs/matrix-bridge-api.pdf
 
 ---
 
