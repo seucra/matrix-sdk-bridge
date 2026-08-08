@@ -4,6 +4,7 @@ version = "0.1.3"
 edition = "2024"
 description = "JavaScript-friendly WebAssembly bindings for the Matrix Rust SDK"
 license = "Apache-2.0"
+repository = "https://github.com/seucra/matrix-sdk-bridge"
 
 # To compile this as a dynamic WebAssembly library
 [lib]
