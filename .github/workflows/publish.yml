@@ -1,0 +1,35 @@
+name: Publish WASM Bridge
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # Required for OIDC and Provenance
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        
+      - name: Install wasm-pack
+        uses: jetli/wasm-pack-action@v0.4.0
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          registry-url: 'https://registry.npmjs.org'
+          
+      - name: Build WASM package
+        run: wasm-pack build --target web --scope seucra
+        
+      - name: Publish to npm with Provenance
+        # wasm-pack usually outputs to a 'pkg' directory. 
+        # Adjust the cd command if your output folder is different!
+        run: |
+          cd pkg 
+          npm publish --provenance --access public

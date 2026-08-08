@@ -1,6 +1,6 @@
 # @seucra/matrix-sdk-bridge
 
-> A general-purpose WebAssembly wrapper around the Matrix Rust SDK
+> A general-purpose Rust-compiled WASM module wrapper around the Matrix Rust SDK
 
 ## Overview
 
